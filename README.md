@@ -1,6 +1,7 @@
 # TypescriptCalculator
 Experimenting with Typescript.
 
-Run `tsc src/main.ts
+## To run:
+Run `tsc src/main.ts`
 
-Run `node src/main.js
+Run `node src/main.js`
