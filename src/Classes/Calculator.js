@@ -3,17 +3,17 @@ exports.__esModule = true;
 var Calculator = /** @class */ (function () {
     function Calculator() {
     }
-    Calculator.prototype.Add = function (numbers) {
-        return numbers.reduce(function (a, b) { return a + b; }, 0);
+    Calculator.prototype.Add = function (numberOne, numberTwo) {
+        console.log(+numberOne + +numberTwo);
     };
-    Calculator.prototype.Subtract = function (numbers) {
-        throw new Error("Method not implemented.");
+    Calculator.prototype.Subtract = function (numberOne, numberTwo) {
+        console.log(+numberOne - +numberTwo);
     };
-    Calculator.prototype.Multiply = function (numbers) {
-        throw new Error("Method not implemented.");
+    Calculator.prototype.Multiply = function (numberOne, numberTwo) {
+        console.log(+numberOne * +numberTwo);
     };
-    Calculator.prototype.Divide = function (numbers) {
-        throw new Error("Method not implemented.");
+    Calculator.prototype.Divide = function (numberOne, numberTwo) {
+        console.log(+numberOne / +numberTwo);
     };
     return Calculator;
 }());
