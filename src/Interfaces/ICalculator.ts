@@ -1,6 +1,6 @@
 export interface ICalculator {
-    Add(numbers: Array<number>): number,
-    Subtract(numbers: Array<number>): number,
-    Multiply(numbers: Array<number>): number,
-    Divide(numbers: Array<number>): number,
+    Add(numberOne: number, numberTwo: number): void,
+    Subtract(numberOne: number, numberTwo: number): void,
+    Multiply(numberOne: number, numberTwo: number): void,
+    Divide(numberOne: number, numberTwo: number): void,
 }

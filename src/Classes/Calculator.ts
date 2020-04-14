@@ -1,20 +1,23 @@
 import { ICalculator } from "../Interfaces/ICalculator";
 
 export class Calculator implements ICalculator {
-    Add(numbers: number[]): number {
+    Add(numberOne: number, numberTwo: number): void {
         
-        return numbers.reduce((a, b) => a + b, 0);
+        console.log(+numberOne + +numberTwo);
     }
 
-    Subtract(numbers: number[]): number {
-        throw new Error("Method not implemented.");
+    Subtract(numberOne: number, numberTwo: number): void {
+        
+        console.log(+numberOne - +numberTwo);
     }
 
-    Multiply(numbers: number[]): number {
-        throw new Error("Method not implemented.");
+    Multiply(numberOne: number, numberTwo: number): void {
+        
+        console.log(+numberOne * +numberTwo);
     }
 
-    Divide(numbers: number[]): number {
-        throw new Error("Method not implemented.");
+    Divide(numberOne: number, numberTwo: number): void {
+        
+        console.log(+numberOne / +numberTwo);
     }
 }

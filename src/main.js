@@ -43,32 +43,39 @@ var Main;
     var calculator;
     function Initialise() {
         calculator = new Calculator_1.Calculator();
-        Options();
+        StartCalc();
     }
     Main.Initialise = Initialise;
-    function Options() {
+    function StartCalc() {
         return __awaiter(this, void 0, void 0, function () {
-            var answer;
+            var numberOne, numberTwo, choice;
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, askQuestion("What would you like to do?\n        1. Add\n        2. Multiply\n        3. Subtract\n        4. Divide\n        \n        Choice: ")];
+                    case 0: return [4 /*yield*/, Question("Enter first number: ")];
                     case 1:
-                        answer = _a.sent();
-                        switch (answer) {
+                        numberOne = _a.sent();
+                        return [4 /*yield*/, Question("Enter second number: ")];
+                    case 2:
+                        numberTwo = _a.sent();
+                        return [4 /*yield*/, Question("What would you like to do?\n            1. Add\n            2. Multiply\n            3. Subtract\n            4. Divide\n            5. Exit\n            \n            Choice: ")];
+                    case 3:
+                        choice = _a.sent();
+                        switch (choice) {
                             case "1":
-                                console.log("You selected Add!");
+                                calculator.Add(numberOne, numberTwo);
                                 break;
                             case "2":
-                                console.log("You selected Multiply!");
+                                calculator.Multiply(numberOne, numberTwo);
                                 break;
                             case "3":
-                                console.log("You selected Subtract!");
+                                calculator.Subtract(numberOne, numberTwo);
                                 break;
                             case "4":
-                                console.log("You selected Divide!");
+                                calculator.Divide(numberOne, numberTwo);
                                 break;
+                            case "5": break;
                             default:
-                                console.log("Sorry, thats not an option!");
+                                console.log("Too bad. Looks like you'll have to restart the program now to try again...\n            ");
                                 break;
                         }
                         return [2 /*return*/];
@@ -76,7 +83,7 @@ var Main;
             });
         });
     }
-    function askQuestion(query) {
+    function Question(query) {
         var rl = readline.createInterface({
             input: process.stdin,
             output: process.stdout
