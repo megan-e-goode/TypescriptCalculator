@@ -75,7 +75,7 @@ var Main;
                                 break;
                             case "5": break;
                             default:
-                                console.log("Sorry, thats not an option!");
+                                console.log("Too bad. Looks like you'll have to restart the program now to try again...\n            ");
                                 break;
                         }
                         return [2 /*return*/];

@@ -10,7 +10,7 @@ export namespace Main {
         StartCalc();       
     }
 
-    async function StartCalc() { 
+    async function StartCalc() {
         let numberOne: number = await Question(`Enter first number: `);
         let numberTwo:number = await Question(`Enter second number: `);
 
@@ -23,18 +23,19 @@ export namespace Main {
             
             Choice: `);
 
-            switch(choice) {
-                case "1": calculator.Add(numberOne, numberTwo); 
-                    break;
-                case "2": calculator.Multiply(numberOne, numberTwo);
-                    break;
-                case "3": calculator.Subtract(numberOne, numberTwo);
-                    break;
-                case "4": calculator.Divide(numberOne, numberTwo);
-                    break;
-                case "5": break;
-                default: console.log("Sorry, thats not an option!"); break;        
-            }
+        switch(choice) {
+            case "1": calculator.Add(numberOne, numberTwo); 
+                break;
+            case "2": calculator.Multiply(numberOne, numberTwo);
+                break;
+            case "3": calculator.Subtract(numberOne, numberTwo);
+                break;
+            case "4": calculator.Divide(numberOne, numberTwo);
+                break;
+            case "5": break;
+            default: console.log(`Too bad. Looks like you'll have to restart the program now to try again...
+            `); break;        
+        }
     }
 
     function Question(query: string): Promise<any> {
